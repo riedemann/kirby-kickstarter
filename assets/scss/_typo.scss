@@ -1,0 +1,82 @@
+ // FONTS
+$font-sizes: (
+  h1: 36px,
+  xl: 24px,
+  lg: 18px,
+  md: 16px,
+  sm: 14px,
+  xs: 12px
+) !default;
+
+$font-families: (
+  base: "Museo Sans",
+  code: monospace
+) !default;
+
+$font-base-line-height: 1.33 !default;
+
+@mixin font($font-size: md, $weight: 500, $line-height: auto, $family: base) {
+  $size: map-get($font-sizes, $font-size);
+  font-size: $size;
+  font-weight: $weight;
+  font-family: map-get($font-families, $family);
+
+  @if($line-height == auto) {
+    line-height: $font-base-line-height;
+  } @else {
+      @if (type-of($line-height) == number or $line-height == 'inherit' or $line-height == 'normal') {
+        line-height: $line-height;
+      } @elseif ($line-height != 'none' and $line-height != false) {
+        @error "D’oh! `#{$line-height}` is not a valid value for `$line-height`.";
+    }
+  }
+}
+
+// Helper Classes
+.f {
+  @each $size, $dim in $font-sizes {
+    &-#{$size} {
+      @include font($size, 500);
+      margin-bottom: space(md);
+    }
+
+    &-#{$size}-bold {
+      @include font($size, 700);
+      margin-bottom: space(md);
+    }
+
+    &-#{$size}-light {
+      @include font($size, 300);
+      margin-bottom: space(md);
+    }
+
+    &-#{$size}-lightest {
+      @include font($size, 100);
+      margin-bottom: space(md);
+    }
+  }
+}
+
+.t {
+  @include font(md);
+  margin-bottom: space(lg);
+
+  + .t {
+    margin-top: space(md) * -1;
+  }
+
+  &-h1 {
+    @include font(h1, 700);
+    margin-bottom: space(lg);
+  }
+
+  &-h2 {
+    @include font(lg, 700);
+    margin-bottom: space(sm);
+  }
+
+  &-h3 {
+    @include font(md, 700);
+    margin-bottom: space(sm);
+  }
+}

@@ -1,0 +1,18 @@
+@import './variables';
+
+// vendor css
+@import 'bootstrap/scss/bootstrap-flex';
+
+@import './webfonts';
+@import './typo';
+@import './mixins';
+@import './base';
+@import './autotext';
+
+// patterns in order of significance
+@import '../../site/patterns/atoms/**/*';
+@import '../../site/patterns/molecules/**/*';
+@import '../../site/patterns/organisms/**/*';
+@import '../../site/patterns/templates/**/*';
+
+@import './defence';

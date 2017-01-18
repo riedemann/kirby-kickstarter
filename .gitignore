@@ -1,4 +1,42 @@
+# System files
+# ------------
+
+
 .DS_Store
-/site/accounts
-/assets/avatars
+
+# Temporary files
+# ---------------
+
 /thumbs/*
+!/thumbs/index.html
+
+/site/cache/*
+!/site/cache/index.html
+
+# -------------SECURITY-------------
+# NEVER publish these files via Git!
+# -------------SECURITY-------------
+
+# Kirby accounts
+# ---------------
+
+/site/accounts/*
+!/site/accounts/index.html
+
+# Avatars
+# ---------------
+
+/assets/avatars/*
+!/assets/avatars/index.html
+
+# Development files
+node_modules
+/assets/js/dist/bundle.js
+/assets/js/dist/bundle.js.map
+/assets/js/dist/bundle.min.js
+/disc.html
+/assets/css/bundle.css.map
+/assets/css/bundle.css
+/assets/css/bundle.min.css
+/assets/js/dist/maps
+/assets/js/dist/bundle.map.js

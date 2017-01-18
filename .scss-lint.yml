@@ -1,0 +1,20 @@
+# Default application configuration that all configurations inherit from.
+
+scss_files: ['assets/**/*.scss', 'site/patterns/**/*/scss']
+exclude: "node_modules/**"
+plugin_directories: ['.scss-linters']
+
+# List of gem names to load custom linters from (make sure they are already
+# installed)
+plugin_gems: []
+
+# Default severity of all linters.
+severity: warning
+
+linters:
+  PropertySortOrder:
+    order: recess
+  NestingDepth:
+    max_depth: 5
+  PlaceholderInExtend:
+    enabled: false

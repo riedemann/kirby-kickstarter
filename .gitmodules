@@ -1,0 +1,3 @@
+[submodule "site/plugins/patterns"]
+	path = site/plugins/patterns
+	url = https://github.com/getkirby-plugins/patterns-plugin
