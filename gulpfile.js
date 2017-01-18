@@ -13,7 +13,7 @@ var watchify = require('watchify');
 var through = require('through2');
 
 var config = {
-  host: 'localhost',
+  host: 'nordantech.local:8888',
   debug: true,
 
   scss: {

@@ -11,19 +11,21 @@ $color-black: #000;
 $color-black-alpha: transparentize($color-black, .54);
 $color-black-alpha-soft: transparentize($color-black, .76);
 
+$color-grey: #aaa;
+$color-grey-light: #eee;
+$color-grey-dark: #444;
+
 $colors: (
-  blue: $color-blue,
-  blue-light: $color-blue-light,
-  red: $color-red,
-  red-dark: $color-red-dark,
   white: $color-white,
   white-alpha: $color-white-alpha,
   black: $color-black,
   black-alpha: $color-black-alpha,
   black-alpha-soft: $color-black-alpha-soft,
+  grey: $color-grey,
+  grey-dark: $color-grey-dark
 );
 
-$colors-invert: (black, black-alpha, black-alpha-soft, grey-dark);
+$colors-invert: (black, black-alpha, black-alpha-soft, grey, grey-dark);
 
 //
 // FONTS
@@ -64,15 +66,15 @@ $spaces: (
 // BOOTSTRAP OVERRIDES;
 // See ../../node_modules/bootstrap/scss/_variables.scss
 $enable-flex: true;
-$brand-primary: $color-blue-light;
-$brand-danger: $color-red;
-$gray-light: $color-grey-light;
-
-$btn-secondary-color: $color-blue-light;
-$btn-secondary-bg: $color-white;
-$btn-secondary-border: $color-blue-light;
-
-$input-border-color: $color-blue;
+// $brand-primary: $color-blue-light;
+// $brand-danger: $color-red;
+// $gray-light: $color-grey-light;
+//
+// $btn-secondary-color: $color-blue-light;
+// $btn-secondary-bg: $color-white;
+// $btn-secondary-border: $color-blue-light;
+//
+// $input-border-color: $color-blue;
 
 $btn-padding-x: space(md);
 $btn-padding-y: space(sm);
